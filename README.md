@@ -1,32 +1,34 @@
-# Travel Carbon Emission Prediction — Summer Analytics 2026
+# GreenTravel Intelligence Challenge – HighCarbon Prediction
 
 ## Overview
 
-Capstone project completed as part of **Summer Analytics 2026 by IIT Guwahati**.
-
-The project focuses on analyzing travel data and building a **Machine Learning model to classify trips as High Carbon or Low Carbon**.
+Machine Learning project developed for the **GreenTravel Intelligence Challenge** to predict whether a business trip will be classified as **HighCarbon before booking**.
 
 ## Approach
 
-* Performed data cleaning and exploratory data analysis.
-* Engineered features such as **Distance × Flight Class**.
-* Built a **Gradient Boosting Machine (GBM)** classification model.
-* Evaluated the model using 5-fold cross-validation.
-* Analyzed feature importance to understand the key factors affecting carbon emissions.
+* Performed exploratory data analysis to identify the strongest factors affecting HighCarbon trips.
+* Created **8 features** using route, transport mode, domestic travel, hotel nights, costs, and policy information.
+* Used **target encoding** for route and shipping type while avoiding data leakage.
+* Trained a **Gradient Boosting Classifier** with 5-fold cross-validation.
+* Evaluated the model using ROC-AUC, Precision, Recall, F1-score, ROC Curve, and Confusion Matrix.
 
 ## Results
 
-* **5-Fold CV ROC-AUC: 0.9993**
-* **Distance × Flight Class** was the most important feature.
-* High-carbon trips had significantly higher average travel distances.
+* **5-Fold CV ROC-AUC: 0.99821**
+* **AUC: 0.99770**
+* **Precision: 0.98537**
+* **Recall: 0.96515**
+* **F1 Score: 0.97515**
+
+The model's predictions were mainly driven by **route and transport mode**, with `route_te` being the most important feature.
 
 ## Tech Stack
 
-Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Jupyter Notebook.
+Python, Pandas, NumPy, Scikit-learn, Matplotlib, Jupyter Notebook.
 
-## Certificate
+## Key Takeaway
 
-Successfully completed the **Summer Analytics 2026 Capstone** conducted by **IIT Guwahati**.
+The analysis showed that **where a trip travels and how it travels** are the strongest signals for predicting its carbon category.
 
 ## Author
 
